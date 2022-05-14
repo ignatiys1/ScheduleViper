@@ -8,7 +8,7 @@
 import Foundation
 
 
-typealias SubjectToView = (subject:String, auditory:String, lessonTime:String, lessonType:String, employeeName:String, imgUrl: String)
+typealias SubjectToView = (subject:String, auditory:String, lessonTime:String, lessonType:String, employeeName:String)
 
 enum ErrorTypes {
     case error, loadingGroupsError, loadingScheduleError
@@ -86,14 +86,10 @@ struct SomeSchedule: Decodable, Encodable {
     var studentGroup: Group?
     var schedules: [ScheduleItem] = []
     
-    //var tomorrowDate: Date?
-    //var tomorrowSchedules: [ScheduleItem] = []
-    
     var todayDate: Date?
     var todaySchedules: [Subject] = []
     
     var examSchedules: [ScheduleItem] = []
-    
     
     var currentWeekNumber: Int?
     var dateStart: Date?

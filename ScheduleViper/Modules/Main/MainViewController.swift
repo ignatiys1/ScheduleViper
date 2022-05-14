@@ -14,8 +14,7 @@ class MainViewController: UIViewController, MainViewProtocol {
     var configurator: MainConfiguratorProtocol = MainConfigurator()
     let selfToGroupsSegueName = "selfToGroupsSegueName"
     
-    
-    var calendarView: CalendarView = CalendarView()
+    var calendarView = CalendarView()
     var calendarHeight: NSLayoutConstraint!
     var swipeUp: UISwipeGestureRecognizer!
     var swipeDown: UISwipeGestureRecognizer!
@@ -39,7 +38,6 @@ class MainViewController: UIViewController, MainViewProtocol {
         presenter.configureView()
         
     }
-   
     
     // MARK: - Navigation methods
     
@@ -69,11 +67,16 @@ class MainViewController: UIViewController, MainViewProtocol {
     
     // MARK: - MainViewProtocol methods
     
-    func setConstraintsForCalendarView(){
-        //Где должно быть все, что в этой функции
+    func setupView(){
         view.addSubview(calendarView)
         
-        calendarHeight = NSLayoutConstraint(item: calendarView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 300)
+        calendarHeight = NSLayoutConstraint(item: calendarView,
+                                            attribute: .height,
+                                            relatedBy: .equal,
+                                            toItem: nil,
+                                            attribute: .notAnAttribute,
+                                            multiplier: 1,
+                                            constant: 300)
         
         view.addConstraint(calendarHeight)
         
@@ -124,20 +127,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ScheduleTableViewCell {
-            let subjectTuple = presenter.getLessonInfo(for: indexPath.section)
-            cell.setInfoFrom(subjectTuple: subjectTuple)
-            //правильно ли передавать адрес изображения из VC
-            presenter.loadImage(from: subjectTuple.imgUrl) { [cell] imageData in
-                //кто должен заниматься преобразованием Data в UIImage
-                if let image = UIImage(data: imageData) {
-                    cell.employeeImageView.image = image
-                }
+            let subjectTuple = presenter.getLessonInfo(for: indexPath.section)  { [cell] image in
+                cell.employeeImageView.image = image
             }
+            cell.setInfoFrom(subjectTuple: subjectTuple)
             return cell
         }
         return UITableViewCell()
     }
-    
-   
     
 }

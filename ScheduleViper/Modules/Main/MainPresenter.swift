@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class MainPresenter: MainPresenterProtocol, CalendarViewDelegate {
     
@@ -36,7 +37,7 @@ class MainPresenter: MainPresenterProtocol, CalendarViewDelegate {
         interactor.getAllGroups()
         
         calendarView.configureCalendarView()
-        view.setConstraintsForCalendarView()
+        view.setupView()
         
         view.reloadTable()
     }
@@ -57,18 +58,23 @@ class MainPresenter: MainPresenterProtocol, CalendarViewDelegate {
         return interactor.getNumberOfLessons(at: currentDate)
     }
     
-    func getLessonInfo(for id: Int) -> SubjectToView {
+    func getLessonInfo(for id: Int, completion: @escaping  (UIImage) -> Void) -> SubjectToView {
         let subject = interactor.getSubject(at: currentDate, with: id)
         if let subject = subject {
-            return (subject.subject ?? "",subject.auditory[0],subject.lessonTime ?? "",subject.lessonType ?? "",subject.employee[0].fio ?? "", subject.employee[0].photoLink ?? "")
+            if let stringUrl = subject.employee[0].photoLink {
+                interactor.loadImage(from: stringUrl) { imageData in
+                    if let image = UIImage(data: imageData) {
+                        completion(image)
+                    }
+                }
+            }
+            return (subject.subject ?? "",subject.auditory[0],subject.lessonTime ?? "",subject.lessonType ?? "",subject.employee[0].fio ?? "")
         }
-        return ("Error","","","","","")
+        return ("Error","","","","")
     }
     
     func loadImage(from stringUrl: String, completion: @escaping  (Data) -> Void) {
-        if stringUrl != "" {
-            interactor.loadImage(from: stringUrl, completion: completion)
-        }
+        
     }
     
     func loadingError(type: ErrorTypes, error: Error) {

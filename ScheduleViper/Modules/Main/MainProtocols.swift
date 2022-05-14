@@ -11,7 +11,7 @@ import UIKit
 protocol MainViewProtocol: class {
     func reloadTable()
     func setCalendarHeight(with: Float)
-    func setConstraintsForCalendarView()
+    func setupView()
     func showAlert(text: String, type: ErrorTypes)
 }
 
@@ -24,8 +24,7 @@ protocol MainPresenterProtocol: class {
     func updateSchedule()
     
     func getNumberOfLessons() -> Int
-    func getLessonInfo(for: Int) -> SubjectToView
-    func loadImage(from: String, completion: @escaping (Data)->Void)
+    func getLessonInfo(for: Int, completion: @escaping (UIImage)->Void) -> SubjectToView
     
     func loadingError(type: ErrorTypes, error: Error)
     

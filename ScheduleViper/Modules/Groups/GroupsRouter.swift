@@ -22,8 +22,6 @@ class GroupsRouter: GroupsRouterProtocol {
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let DVC = segue.destination as? MainViewController {
-//            print("asdasd")
-//        }
+
     }
 }

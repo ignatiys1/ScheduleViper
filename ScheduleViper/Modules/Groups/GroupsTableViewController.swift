@@ -22,7 +22,6 @@ class GroupsTableViewController: UITableViewController, GroupsViewProtocol, UITe
         
     }
     
-    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -54,7 +53,6 @@ class GroupsTableViewController: UITableViewController, GroupsViewProtocol, UITe
         
     }
     
-    
     // MARK: - UITextFieldDelegate methods
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -72,14 +70,11 @@ class GroupsTableViewController: UITableViewController, GroupsViewProtocol, UITe
         return true
     }
     
-   
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         presenter.router.prepare(for: segue, sender: sender)
     }
-    
 
     // MARK: - GroupsViewProtocol methods
     func reloadData() {
