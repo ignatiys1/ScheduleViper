@@ -25,7 +25,6 @@ class CalendarView: FSCalendar, CalendarViewProtocol, FSCalendarDelegate {
     var delegateView: CalendarViewDelegate?
     var calendarHeight: NSLayoutConstraint!
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -47,23 +46,17 @@ class CalendarView: FSCalendar, CalendarViewProtocol, FSCalendarDelegate {
         }
     }
     
-    
-    
     func configureCalendarView() {
         delegate = self
         
         self.translatesAutoresizingMaskIntoConstraints = false
+        self.locale = NSLocale(localeIdentifier: "en_EN") as Locale
         self.scope = .week
         self.select(.now)
 
     }
  
     //MARK: - FSCalendarDelegate methods
-    
-//    func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
-//        calendarHeight.constant = bounds.height
-//        //view.layoutIfNeeded()
-//    }
     
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
         delegateView?.setCalendarHeight(with: Float(bounds.height))

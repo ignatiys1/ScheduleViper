@@ -35,16 +35,6 @@ class GroupsInteractor: GroupsInteractorProtocol {
                 return scheduleService.allGroups[id].name
             } else {
                 return (scheduleService.allGroups.filter() {$0.name.contains(name)})[id].name
-//                var currentId = 0
-//                for group in scheduleService.allGroups {
-//                    if group.name.contains(name) {
-//                        if currentId == id {
-//                            return group.name
-//                        } else {
-//                            currentId += 1
-//                        }
-//                    }
-//                }
             }
         }
         return nil

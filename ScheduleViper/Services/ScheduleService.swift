@@ -27,7 +27,6 @@ class ScheduleService: ScheduleServiceProtocol {
         dateFormatter.dateFormat = "dd.MM.yyyy"
         
         schedule = storageService.savedSchedule() ?? SomeSchedule()
-        //currentGroup = schedule.studentGroup ?? Group()
         allGroups = storageService.savedAllGroups()
     }
     
@@ -101,9 +100,7 @@ extension ScheduleService {
             decoder.dateDecodingStrategy = .formatted(dateFormatter)
             
             guard let string = String(data: data, encoding: .utf8) else { return nil}
-//            print(string)
-//            let object = try decoder.decode(T.self, from: data)
-//            debugPrint(object)
+            
             return try decoder.decode(T.self, from: data)
         } catch {
             print(error)

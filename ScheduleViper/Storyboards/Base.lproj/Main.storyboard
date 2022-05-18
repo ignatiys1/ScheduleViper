@@ -44,6 +44,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="groupsButton" destination="Bed-JI-NeM" id="Ej3-iX-KvI"/>
                         <outlet property="tableView" destination="IQf-ug-6oZ" id="F69-o1-szf"/>
                         <segue destination="EFY-9S-LR9" kind="presentation" identifier="selfToGroupsSegueName" id="pFw-vq-lTF"/>
                     </connections>

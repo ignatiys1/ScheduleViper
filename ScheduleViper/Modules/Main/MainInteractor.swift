@@ -8,7 +8,7 @@
 import Foundation
 
 class MainInteractor: MainInteractorProtocol {
-    
+   
     weak var presenter: MainPresenterProtocol!
     
     let scheduleService: ScheduleServiceProtocol = ScheduleService()
@@ -22,6 +22,12 @@ class MainInteractor: MainInteractorProtocol {
     var needToLoadSchedule: Bool {
         get {
             return scheduleService.currentGroup.id != 0 && scheduleService.currentGroup.id != scheduleService.schedule.studentGroup?.id
+        }
+    }
+    
+    var currentGroup: Group {
+        get {
+            return scheduleService.currentGroup
         }
     }
     
