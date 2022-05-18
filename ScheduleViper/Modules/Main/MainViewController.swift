@@ -113,8 +113,8 @@ class MainViewController: UIViewController, MainViewProtocol {
         
     }
     
-    func setButtonTitle(with groupName: String) {
-        groupsButton.setTitle("Select group (\(groupName))", for: .normal)
+    func setButtonTitle(with title: String) {
+        groupsButton.setTitle(title, for: .normal)
     }
 }
 

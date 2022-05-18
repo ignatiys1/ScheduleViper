@@ -39,7 +39,13 @@ class MainPresenter: MainPresenterProtocol, CalendarViewDelegate {
         calendarView.configureCalendarView()
         view.setupView()
         
-        view.setButtonTitle(with: interactor.currentGroup.name)
+        let groupName = interactor.currentGroup.name
+        
+        if groupName != "" {
+            view.setButtonTitle(with: "Select group (\(groupName))")
+        } else {
+            view.setButtonTitle(with: "Select group")
+        }
         
         view.reloadTable()
         
