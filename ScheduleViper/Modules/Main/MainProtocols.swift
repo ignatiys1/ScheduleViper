@@ -13,6 +13,7 @@ protocol MainViewProtocol: class {
     func setCalendarHeight(with: Float)
     func setupView()
     func showAlert(text: String, type: ErrorTypes)
+    func setButtonTitle(with: String)
 }
 
 protocol MainPresenterProtocol: class {
@@ -32,12 +33,14 @@ protocol MainPresenterProtocol: class {
 
 protocol MainInteractorProtocol: class {
     var needToLoadSchedule: Bool { get }
+    var currentGroup: Group { get }
     
     func getAllGroups()
     func loadSchedule()
     func getNumberOfLessons(at date: Date) -> Int
     func getSubject(at: Date, with: Int) -> Subject?
     func loadImage(from: String, completion:  @escaping (Data) -> Void)
+    
 }
 
 protocol MainRouterProtocol: class {

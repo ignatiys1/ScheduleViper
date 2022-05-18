@@ -17,7 +17,8 @@ class GroupsRouter: GroupsRouterProtocol {
     }
     
     func closeScene() {
-        viewController.mainController.presenter.updateSchedule()
+        //viewController.mainController.presenter.updateSchedule()
+        viewController.mainController.presenter.configureView()
         viewController.dismiss(animated: true, completion: nil)
     }
     

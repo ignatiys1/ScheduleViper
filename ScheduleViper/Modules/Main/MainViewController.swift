@@ -19,6 +19,7 @@ class MainViewController: UIViewController, MainViewProtocol {
     var swipeUp: UISwipeGestureRecognizer!
     var swipeDown: UISwipeGestureRecognizer!
     
+    @IBOutlet weak var groupsButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -110,6 +111,10 @@ class MainViewController: UIViewController, MainViewProtocol {
             break
         }
         
+    }
+    
+    func setButtonTitle(with groupName: String) {
+        groupsButton.setTitle("Select group (\(groupName))", for: .normal)
     }
 }
 

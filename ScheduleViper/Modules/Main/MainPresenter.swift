@@ -39,7 +39,10 @@ class MainPresenter: MainPresenterProtocol, CalendarViewDelegate {
         calendarView.configureCalendarView()
         view.setupView()
         
+        view.setButtonTitle(with: interactor.currentGroup.name)
+        
         view.reloadTable()
+        
     }
 
     func selectGroupButtonClicked() {
