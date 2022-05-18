@@ -16,8 +16,7 @@
 		FF057F972824435400FB6BC9 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = FF057F962824435400FB6BC9 /* FSCalendar */; };
 		FF057FA12824437800FB6BC9 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF057FA02824437800FB6BC9 /* CalendarView.swift */; };
 		FF057FA42825509700FB6BC9 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF057FA32825509600FB6BC9 /* UIExtensions.swift */; };
-		FF08431A2821CE0D00529102 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF08430A2821CD3B00529102 /* Alamofire.framework */; };
-		FF08431B2821CE0D00529102 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF08430A2821CD3B00529102 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF27CCFA2835B15500B376B7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FF27CCF92835B15500B376B7 /* Alamofire */; };
 		FFC67230281F17BD00245BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC6722F281F17BD00245BB4 /* AppDelegate.swift */; };
 		FFC67232281F17BD00245BB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC67231281F17BD00245BB4 /* SceneDelegate.swift */; };
 		FFC67234281F17BD00245BB4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC67233281F17BD00245BB4 /* MainViewController.swift */; };
@@ -41,62 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FF0843092821CD3B00529102 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF0842FE2821CD3B00529102 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		FF08430B2821CD3B00529102 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF0842FE2821CD3B00529102 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		FF08430D2821CD3B00529102 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF0842FE2821CD3B00529102 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire macOS";
-		};
-		FF08430F2821CD3B00529102 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF0842FE2821CD3B00529102 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire macOS Tests";
-		};
-		FF0843112821CD3B00529102 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF0842FE2821CD3B00529102 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS";
-		};
-		FF0843132821CD3B00529102 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF0842FE2821CD3B00529102 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS Tests";
-		};
-		FF0843152821CD3B00529102 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF0842FE2821CD3B00529102 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4202FE01B667AA100C997FB;
-			remoteInfo = "Alamofire watchOS";
-		};
-		FF0843172821CD3B00529102 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF0842FE2821CD3B00529102 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 31293065263E17D600473CEA;
-			remoteInfo = "Alamofire watchOS Tests";
-		};
 		FFC67243281F17BF00245BB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FFC67224281F17BD00245BB4 /* Project object */;
@@ -120,7 +63,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FF08431B2821CE0D00529102 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +78,6 @@
 		FF057F922822D61C00FB6BC9 /* GroupsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsProtocols.swift; sourceTree = "<group>"; };
 		FF057FA02824437800FB6BC9 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		FF057FA32825509600FB6BC9 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
-		FF0842FE2821CD3B00529102 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		FFC6722C281F17BD00245BB4 /* ScheduleViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC6722F281F17BD00245BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC67231281F17BD00245BB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF08431A2821CE0D00529102 /* Alamofire.framework in Frameworks */,
+				FF27CCFA2835B15500B376B7 /* Alamofire in Frameworks */,
 				FF057F972824435400FB6BC9 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,21 +152,6 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
-		FF0842FF2821CD3B00529102 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FF08430A2821CD3B00529102 /* Alamofire.framework */,
-				FF08430C2821CD3B00529102 /* Alamofire iOS Tests.xctest */,
-				FF08430E2821CD3B00529102 /* Alamofire.framework */,
-				FF0843102821CD3B00529102 /* Alamofire macOS Tests.xctest */,
-				FF0843122821CD3B00529102 /* Alamofire.framework */,
-				FF0843142821CD3B00529102 /* Alamofire tvOS Tests.xctest */,
-				FF0843162821CD3B00529102 /* Alamofire.framework */,
-				FF0843182821CD3B00529102 /* Alamofire watchOS Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		FF0843192821CE0D00529102 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,7 +162,6 @@
 		FFC67223281F17BD00245BB4 = {
 			isa = PBXGroup;
 			children = (
-				FF0842FE2821CD3B00529102 /* Alamofire.xcodeproj */,
 				FFC6722E281F17BD00245BB4 /* ScheduleViper */,
 				FFC67245281F17BF00245BB4 /* ScheduleViperTests */,
 				FFC6724F281F17BF00245BB4 /* ScheduleViperUITests */,
@@ -383,6 +308,7 @@
 			name = ScheduleViper;
 			packageProductDependencies = (
 				FF057F962824435400FB6BC9 /* FSCalendar */,
+				FF27CCF92835B15500B376B7 /* Alamofire */,
 			);
 			productName = ScheduleViper;
 			productReference = FFC6722C281F17BD00245BB4 /* ScheduleViper.app */;
@@ -458,15 +384,10 @@
 			mainGroup = FFC67223281F17BD00245BB4;
 			packageReferences = (
 				FF057F952824435400FB6BC9 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				FF27CCF82835B15500B376B7 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = FFC6722D281F17BD00245BB4 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = FF0842FF2821CD3B00529102 /* Products */;
-					ProjectRef = FF0842FE2821CD3B00529102 /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				FFC6722B281F17BD00245BB4 /* ScheduleViper */,
@@ -475,65 +396,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		FF08430A2821CD3B00529102 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = FF0843092821CD3B00529102 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FF08430C2821CD3B00529102 /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = FF08430B2821CD3B00529102 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FF08430E2821CD3B00529102 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = FF08430D2821CD3B00529102 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FF0843102821CD3B00529102 /* Alamofire macOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire macOS Tests.xctest";
-			remoteRef = FF08430F2821CD3B00529102 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FF0843122821CD3B00529102 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = FF0843112821CD3B00529102 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FF0843142821CD3B00529102 /* Alamofire tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire tvOS Tests.xctest";
-			remoteRef = FF0843132821CD3B00529102 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FF0843162821CD3B00529102 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = FF0843152821CD3B00529102 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FF0843182821CD3B00529102 /* Alamofire watchOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire watchOS Tests.xctest";
-			remoteRef = FF0843172821CD3B00529102 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FFC6722A281F17BD00245BB4 /* Resources */ = {
@@ -944,6 +806,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		FF27CCF82835B15500B376B7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -951,6 +821,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF057F952824435400FB6BC9 /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
+		};
+		FF27CCF92835B15500B376B7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF27CCF82835B15500B376B7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
