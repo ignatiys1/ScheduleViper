@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Group" representedClassName="Group" syncable="YES" codeGenerationType="class">
+        <attribute name="calendarId" optional="YES" attributeType="String"/>
+        <attribute name="course" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="facultyId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="facultyName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="specialityDepartmentEducationFormId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="specialityName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Lecturer" representedClassName="Lecturer" syncable="YES" codeGenerationType="class">
+        <attribute name="calendarId" optional="YES" attributeType="String"/>
+        <attribute name="degree" optional="YES" attributeType="String"/>
+        <attribute name="fio" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="middleName" optional="YES" attributeType="String"/>
+        <attribute name="photoLink" optional="YES" attributeType="String"/>
+        <attribute name="rank" optional="YES" attributeType="String"/>
+        <attribute name="urlId" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ScheduleItem" representedClassName="ScheduleItem" syncable="YES" codeGenerationType="class">
+        <attribute name="weekDay" optional="YES" attributeType="String"/>
+        <relationship name="schedule" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Subject"/>
+    </entity>
+    <entity name="SomeSchedule" representedClassName="SomeSchedule" syncable="YES" codeGenerationType="class">
+        <attribute name="currentWeekNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dateEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="sessionEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="sessionStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="todayDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="employee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lecturer"/>
+        <relationship name="schedules" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ScheduleItem"/>
+        <relationship name="studentGroup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group"/>
+        <relationship name="todaySchedules" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Subject"/>
+    </entity>
+    <entity name="Subject" representedClassName="Subject" syncable="YES" codeGenerationType="class">
+        <attribute name="auditory" optional="YES" attributeType="String"/>
+        <attribute name="endLessonTime" optional="YES" attributeType="String"/>
+        <attribute name="gradebookLesson" optional="YES" attributeType="String"/>
+        <attribute name="gradebookLessonlist" optional="YES" attributeType="String"/>
+        <attribute name="lessonTime" optional="YES" attributeType="String"/>
+        <attribute name="lessonType" optional="YES" attributeType="String"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="numSubgroup" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="startLessonTime" optional="YES" attributeType="String"/>
+        <attribute name="studentGroupModelList" optional="YES" attributeType="String"/>
+        <attribute name="subject" optional="YES" attributeType="String"/>
+        <attribute name="zaoch" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="employee" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lecturer"/>
+        <relationship name="studentGroup" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Group"/>
+        <relationship name="weekNumber" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WeekNumber" inverseName="subject" inverseEntity="WeekNumber"/>
+    </entity>
+    <entity name="WeekNumber" representedClassName="WeekNumber" syncable="YES" codeGenerationType="class">
+        <attribute name="weekNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="subject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Subject" inverseName="weekNumber" inverseEntity="Subject"/>
+    </entity>
+    <elements>
+        <element name="Group" positionX="-18" positionY="27" width="128" height="14"/>
+        <element name="Lecturer" positionX="36" positionY="99" width="128" height="14"/>
+        <element name="SomeSchedule" positionX="9" positionY="63" width="128" height="14"/>
+        <element name="Subject" positionX="18" positionY="72" width="128" height="14"/>
+        <element name="WeekNumber" positionX="27" positionY="81" width="128" height="14"/>
+        <element name="ScheduleItem" positionX="36" positionY="90" width="128" height="14"/>
+    </elements>
+</model>
